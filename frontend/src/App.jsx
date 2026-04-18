@@ -6,8 +6,8 @@ import Viewer from './pages/Viewer';
 
 // Global Socket instance export
 import { io } from 'socket.io-client';
-// Use environment variable if deployed, otherwise fallback to local hostname for testing
-const backendUrl = import.meta.env.VITE_BACKEND_URL || `http://${window.location.hostname}:3001`;
+// Use the live Render backend URL for remote viewing!
+const backendUrl = "https://cricket-scoreboard-keeper.onrender.com";
 export const socket = io(backendUrl);
 
 function App() {
